@@ -1,7 +1,11 @@
 import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import iOSLight from "./../vector-images/ios-logo-lght-gray.svg";
-import homepageTruckX from "./../vector-images/truckx-846x846.svg";
-import truckXMain from "./../vector-images/truck-main-2792x1366.png";
+import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
+
+import IOSLight from "./../vector-images/ios-logo-lght-gray.svg";
+import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
+
+import homepageTruckX from "./../vector-images/truckx-708x708.png";
+import truckXMain from "./../vector-images/truck-main-2746x1342.png";
 import logbook from "./../vector-images/truckx-paper-logsheet-2x.png";
 import iA from "./../vector-images/truckx-ia-2x.png";
 import wireframe from "./../vector-images/truckx-wireframe-2x.png";
@@ -13,12 +17,14 @@ import oneLoad from "./../vector-images/truckx-loads-load.png";
 import oneLoadFreight from "./../vector-images/truckx-load-freight.png";
 import oneLoadSign from "./../vector-images/truckx-load-sign.png";
 import highFiPrototype from "./../vector-images/truckx-high-fidelity-small.gif";
+import { PageNames } from "../names";
 
 const truckXData = {
-  componentName: "TruckX",
+  componentName: PageNames.TRUCKX,
   title: "TruckX",
   description: "Electronic logbook and trip planning app for truck drivers.",
-  icons: [iOSLight, androidLight],
+  icons: [IOSLight, androidLight],
+  iconsDarkTheme: [darkThemeIOSDark, darkThemeAndroidDark],
   homepageImage: homepageTruckX,
   homepageImgAlt: "TruckX image",
 
@@ -51,6 +57,9 @@ const truckXData = {
   aboutArray: [
     "For this project, I worked directly with the CEO of a startup, to design a digital replacement for paper-based truck driver log books. My goal was to give the early stage startup the main user flows, along with the main body of design so they could start building a prototype.",
   ],
+
+  endResultTitle: "End result",
+  mobileDesign: true,
 
   featuresTitle: "Features",
   featuresArray: [

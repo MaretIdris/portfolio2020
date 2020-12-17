@@ -2,6 +2,10 @@
     --app-bar-height: 64px;
 }
 
+#link-for-logo {
+    width: 86px;
+}
+
 .logo {
     width: 40px;
     cursor: pointer;
@@ -10,6 +14,7 @@
 .github-logo {
     width: 24px;
     cursor: pointer;
+    display: block;
 }
 
 #app-bar {
@@ -37,6 +42,7 @@ nav {
     height: 100%;
     justify-content: space-between;
     font-size: 0.9em;
+    margin: 0 5px;
 }
 
 nav > * {
@@ -60,6 +66,15 @@ nav > *:hover {
 
 #designs-container:hover {
     cursor: pointer;
+}
+
+#dark-theme-and-github-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-width: 86px;
 }
 
 
@@ -115,8 +130,8 @@ nav > *:hover {
     top: 16px;
     left: 21px;
     background-color: var(--color-white);
-    border: 1px solid var(--color-gray-accent);
-    -webkit-box-shadow:  0 1px 1px 0 rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-triangle-border);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -130,8 +145,8 @@ nav > *:hover {
     padding: 14px 0;
     background-color: var(--color-white);
     border-radius: var(--border-radius);
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: var(--dropdown-box-shadow);
+    box-shadow: var(--dropdown-box-shadow);
 }
 
 .dropdown > a {
@@ -161,7 +176,7 @@ nav > *:hover {
 }
 
 .app-logos-container > img {
-   padding-left: 5px;
+    padding-left: 5px;
     width: 34px;
     height: 34px;
 }
@@ -191,9 +206,86 @@ nav > *:hover {
     margin-left: -3px;
 }
 
+/*Dark Theme button styling*/
+.switch {
+    position: relative;
+    /*display: inline-block;*/
+    display: block;
+    width: 42px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 100px;
+}
+
+.slider:before {
+    position: absolute;
+    content: url("./../vector-images/moon-icon.svg");
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: -2px;
+    background-color: var(--color-gray-darkest);
+    -webkit-transition: .2s;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 2px 0 3px;
+    border-radius: 100px;
+}
+
+input:checked + .slider {
+    background-color: var(--color-yellow-faded);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+    content: url("./../vector-images/moon-icon-dark.svg");
+    background-color: var(--color-yellow);
+}
+
+/*-----------------*/
+
 @media only screen and (max-width: 600px) {
     #app-bar {
         padding: 0 var(--small-page-padding);
     }
 }
 
+@media only screen and (max-width: 500px) {
+    #link-for-logo {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    #github-logo-on-nav-bar {
+        display: none;
+    }
+    #dark-theme-and-github-container {
+        min-width: auto;
+    }
+    nav > * {
+       padding: 0 5px;
+    }
+}

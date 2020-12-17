@@ -29,7 +29,7 @@
 
 :root {
     /*Fonts*/
-    --default-font: "Gilroy-Bold";
+    --default-font: "Gilroy-Bold", "Lexend Deca", sans-serif;
     --default-font-size: 1em;
     --secondary-font: "Jetbrains Mono Regular", "Roboto Mono", monospace;
     --secondary-font-bold: "JetBrains Mono Extra Bold", "Roboto Mono", monospace;
@@ -37,13 +37,15 @@
     /*Other*/
     --dropdown-opacity-animation-delay: 170;
     --max-app-width: 1435px;
-    --letter-spacing: 0.4px;
+    --letter-spacing: 1px;
     --default-page-padding: 31px;
     --small-page-padding: 16px;
     --distance-between-home-page-components: 35px;
     --distance-between-project-page-components: 42px;
     --border-radius: 4px;
     --button-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    --dropdown-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    --dropdown-triangle-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;
@@ -51,6 +53,19 @@
     --color-gray-font: #717171;
     --color-gray-hover-bckround: #EFEFEF;
     --color-yellow: #EECC11;
+    --color-yellow-faded: #726419;
+    --color-green: #067B11;
+    --color-try-app-button-text: #303030;
+
+    --color-carousel-button-bg-hover: #FFFFFF;
+    --color-carousel-button-bg: #EFEFEF;
+
+    --color-modal-button-bg-hover: #EECC11;
+    --color-modal-button-bg: #EFEFEF;
+
+    --color-triangle-border: #DFDFDF;
+    --color-highlight-text: #303030;
+
 }
 
 /*----- Reset all the CSS styles -----*/
@@ -198,6 +213,7 @@ body {
     max-width: var(--max-app-width);
     margin: 0 auto;
     font-size: var(--default-font-size);
+    background-color: var(--color-white);
 }
 
 html {
@@ -228,12 +244,22 @@ h4 {
 
 h5 {
     font-size: 1.41em;
+    letter-spacing: var(--letter-spacing);
 }
 
 p {
     font-family: var(--secondary-font);
     font-size: 0.82em;
     line-height: 1.4;
+}
+
+/*Text selection color*/
+::selection {
+    background: var(--color-yellow);
+    color: var(--color-highlight-text);
+}
+::-moz-selection {
+    background: var(--color-yellow);
 }
 
 /*Scrollbar*/

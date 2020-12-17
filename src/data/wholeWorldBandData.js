@@ -1,6 +1,8 @@
 import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import homepageWWB from "./../vector-images/wwb-846x846.svg";
-import wwbMain from "./../vector-images/wwb-main-2792x1366.png";
+import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
+
+import homepageWWB from "./../vector-images/wwb-708x708.png";
+import wwbMain from "./../vector-images/wwb-main-2746x1342.png";
 import homePage from "./../vector-images/wwb-home-page.png";
 import videoFeed from "./../vector-images/wwb-video-feed.png";
 import feed from "./../vector-images/wwb-feed.png";
@@ -13,12 +15,14 @@ import createMosaicMixSound from "./../vector-images/wwb-create-your-mosaic-mix-
 import createMyVideo from "./../vector-images/wwb-create-my-video-1.png";
 import createMyVideoTwo from "./../vector-images/wwb-create-my-video-2.png";
 import createMyVideoThree from "./../vector-images/wwb-create-my-video-3.png";
+import { PageNames } from "../names";
 
 const wholeWorldBandData = {
-  componentName: "WholeWorldBand",
+  componentName: PageNames.WHOLEWORLDBAND,
   title: "WholeWorldBand",
   description: "Online recording studio for the whole world.",
   icons: [webLight],
+  iconsDarkTheme: [darkThemeWebDark],
   homepageImage: homepageWWB,
 
   mainImage: wwbMain,

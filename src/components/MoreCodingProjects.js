@@ -1,8 +1,9 @@
 import React from "react";
-import { getValueOfCSSVariable } from "../utils";
+import { getIntegerValueOfCSSVariable } from "../utils";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import { getPageName } from "../pageConstants";
+import { sharedObject } from "./SharedContext";
 
 class MoreCodingProjects extends React.Component {
   constructor(props) {
@@ -81,7 +82,7 @@ class MoreCodingProjects extends React.Component {
   hidePreviousButtonIfMarginLeftIsSmall = () => {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--small-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--small-page-padding");
     const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -94,7 +95,7 @@ class MoreCodingProjects extends React.Component {
   hidePreviousButtonIfMarginLeftIsDefault = () => {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--default-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--default-page-padding");
     const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -153,7 +154,10 @@ class MoreCodingProjects extends React.Component {
 
   addOrHideButtons = () => {
     const windowSize = window.innerWidth;
-    const maxAppWidth = getValueOfCSSVariable(document.body, "--max-app-width");
+    const maxAppWidth = getIntegerValueOfCSSVariable(
+      document.body,
+      "--max-app-width"
+    );
     if (windowSize < maxAppWidth) {
       // Show next and previous buttons
       // If haven't scrolled yet, hide previous button and show next button
@@ -213,37 +217,37 @@ class MoreCodingProjects extends React.Component {
               <div
                 className="one-coding-project more-coding-projects-img"
                 key={index}
+                onClick={() => {
+                  sharedObject.onNavigationClicked(getPageName(project.title));
+                }}
               >
-                <a href={getPageName(project.title)}>
-                  <div className="coding-img-zoom">
-                    <img
-                      className="coding-project-img more-coding-projects-img"
-                      src={project.moreCodingProjectsImage}
-                      alt={project.homepageImgAlt}
-                      onLoad={() => {
-                        this.imageLoaded();
-                      }}
-                      onError={() => {
-                        this.imageLoaded();
-                      }}
-                    />
-                  </div>
-                </a>
-                <a href={getPageName(project.title)}>
-                  <div className="title-and-description-container">
-                    <h4>{project.title}</h4>
-                    <div className="coding-project-description-container">
-                      <p className="light-gray-text">{project.description}</p>
-                      <div className="icons">
-                        {project.icons.map((icon, index) => {
-                          return (
-                            <img src={icon} key={index} alt="Platform icon" />
-                          );
-                        })}
-                      </div>
+                <div className="coding-img-zoom">
+                  <img
+                    className="coding-project-img more-coding-projects-img"
+                    src={project.moreCodingProjectsImage}
+                    alt={project.homepageImgAlt}
+                    onLoad={() => {
+                      this.imageLoaded();
+                    }}
+                    onError={() => {
+                      this.imageLoaded();
+                    }}
+                  />
+                </div>
+
+                <div className="title-and-description-container">
+                  <h4>{project.title}</h4>
+                  <div className="coding-project-description-container">
+                    <p className="light-gray-text">{project.description}</p>
+                    <div className="icons">
+                      {project.icons.map((icon, index) => {
+                        return (
+                          <img src={icon} key={index} alt="Platform icon" />
+                        );
+                      })}
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             );
           })}

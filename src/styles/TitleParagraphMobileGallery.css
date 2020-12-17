@@ -12,6 +12,7 @@
 
 .one-mobile-gallery-image {
     width: 216px;
+    min-width: 216px;
     height: 379px;
     object-fit: cover;
     object-position: top;
@@ -33,7 +34,7 @@
     align-items: center;
     /*padding-left: 9px;*/
     opacity: 0;
-    background-color: var(--color-gray-hover-bckround);
+    background-color: var(--color-carousel-button-bg);
     box-shadow: none;
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
@@ -54,14 +55,14 @@
     padding-left: 4px;
     opacity: 1;
     box-shadow: none;
-    background-color: var(--color-gray-accent);
+    background-color: var(--color-modal-button-bg);
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
 .modal-previous-button:hover {
     -webkit-box-shadow: var(--button-box-shadow);
     box-shadow: var(--button-box-shadow);
-    background-color: var(--color-white);
+    background-color: var(--color-modal-button-bg-hover);
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
@@ -79,7 +80,7 @@
     align-items: center;
     padding-left: 9px;
     opacity: 1;
-    background-color: var(--color-gray-accent);
+    background-color: var(--color-modal-button-bg);
     box-shadow: none;
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
@@ -87,7 +88,7 @@
 .modal-next-button:hover {
     -webkit-box-shadow: var(--button-box-shadow);
     box-shadow: var(--button-box-shadow);
-    background-color: var(--color-white);
+    background-color: var(--color-modal-button-bg-hover);
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 

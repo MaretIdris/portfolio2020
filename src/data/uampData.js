@@ -1,16 +1,13 @@
 import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import homepageUamp from "./../vector-images/uamp-846x846.svg";
-import uampMain from "./../vector-images/uamp-main-2792x1366.png";
-import uampOldDesign from "./../vector-images/uamp-old-design.svg";
+import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
+
+import homepageUamp from "./../vector-images/uamp-708x708.png";
+import uampMain from "./../vector-images/uamp-main-2746x1342.png";
+import uampOldDesign from "./../vector-images/uamp-old-design.png";
 import wireframe from "../vector-images/uamp-wireframe-2x.png";
 import interactionDesign from "../vector-images/uamp-interaction-design.png";
 import lowFiPrototype from "../vector-images/uamp-low-fidelity-prototype.gif";
 import typography from "../vector-images/uamp-typography-2x.png";
-import timelog from "../vector-images/truckx-timelog.png";
-import loads from "../vector-images/truckx-loads.png";
-import oneLoad from "../vector-images/truckx-loads-load.png";
-import oneLoadFreight from "../vector-images/truckx-load-freight.png";
-import oneLoadSign from "../vector-images/truckx-load-sign.png";
 import browseMusic from "./../vector-images/uamp-browse-music.png";
 import myFavourites from "./../vector-images/uamp-my-favourites.png";
 import fullScreenPlayer from "./../vector-images/uamp-full-screen-player.png";
@@ -19,12 +16,14 @@ import byAlbum from "./../vector-images/uamp-by-album.png";
 import albumOpen from "./../vector-images/uamp-album-open.png";
 import emptyState from "./../vector-images/uamp-empty-state.png";
 import highFiPrototype from "../vector-images/uamp-prototype.gif";
+import { PageNames } from "../names";
 
 const uampData = {
-  componentName: "UniversalAndroidMusicPlayer",
+  componentName: PageNames.UAMP,
   title: "Universal Android Music Player",
   description: "Sample music app for Android media developers by Google.",
   icons: [androidLight],
+  iconsDarkTheme: [darkThemeAndroidDark],
   homepageImage: homepageUamp,
 
   // If I need a button on the header, then add those props:
@@ -53,6 +52,9 @@ const uampData = {
     "I worked with members of Google’s Android Developer Relations team to design a canonical sample media app, which is intended to serve as a starter project for developers wanting to create media experiences on Android.",
     "Developers can use different components from the sample app and customize them for their specific needs if needed.",
   ],
+
+  endResultTitle: "End result",
+  mobileDesign: true,
 
   featuresTitle: "Features",
   featuresArray: [

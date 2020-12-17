@@ -2,8 +2,9 @@ import React from "react";
 import "./../styles/DesignProjects.css";
 import nextArrow from "./../vector-images/arrow-right.svg";
 import previousArrow from "./../vector-images/arrow-left.svg";
-import { getValueOfCSSVariable, scrollToTop } from "../utils";
+import { getIntegerValueOfCSSVariable } from "../utils";
 import { getPageName } from "../pageConstants";
+import { sharedObject } from "./SharedContext";
 
 class DesignProjects extends React.Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
-    const paddingSmall = getValueOfCSSVariable(
+    const paddingSmall = getIntegerValueOfCSSVariable(
       document.body,
       "--small-page-padding"
     );
@@ -92,7 +93,7 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewport601To1280Px = () => {
-    const paddingDefault = getValueOfCSSVariable(
+    const paddingDefault = getIntegerValueOfCSSVariable(
       document.body,
       "--default-page-padding"
     );
@@ -164,6 +165,59 @@ class DesignProjects extends React.Component {
   };
 
   render() {
+    const isDarkTheme = this.props.myDarkThemeValue.getValue() === "true";
+
+    const generateIcons = (project) => {
+      const imageTags = [];
+      if (isDarkTheme) {
+        if (project.iconsDarkTheme) {
+          project.iconsDarkTheme.map((icon, index) => {
+            imageTags.push(<img src={icon} key={index} alt="Icon" />);
+          });
+        }
+      } else {
+        if (project.icons) {
+          project.icons.map((icon, index) => {
+            imageTags.push(<img src={icon} key={index} alt="Icon" />);
+          });
+        }
+      }
+      return imageTags;
+    };
+
+    const generateProject = (project, index) => {
+      return (
+        <div
+          className="one-design-project"
+          key={index}
+          onClick={() => {
+            sharedObject.onNavigationClicked(getPageName(project.title));
+          }}
+        >
+          <div className="img-hover-zoom">
+            <img
+              className="design-project-img"
+              src={project.homepageImage}
+              alt={project.homepageImgAlt}
+              onLoad={() => {
+                this.imageLoaded();
+              }}
+              onError={() => {
+                this.imageLoaded();
+              }}
+            />
+          </div>
+          <div className="title-and-description-container">
+            <h4>{project.title}</h4>
+            <div className="project-description-container">
+              <p className="light-gray-text">{project.description}</p>
+              <div className="icons">{generateIcons(project)}</div>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
     return (
       <section
         id="design-projects-container"
@@ -177,46 +231,7 @@ class DesignProjects extends React.Component {
           <img src={nextArrow} alt="Next item arrow" />
         </button>
         <div id="all-projects">
-          {this.props.designProjectsArray.map((project, index) => {
-            console.log(
-              "this.props.designProjectsArray",
-              this.props.designProjectsArray
-            );
-            console.log("project", project);
-            return (
-              <div className="one-design-project" key={index}>
-                <a href={getPageName(project.title)}>
-                  <div className="img-hover-zoom">
-                    <img
-                      className="design-project-img"
-                      src={project.homepageImage}
-                      alt={project.homepageImgAlt}
-                      onLoad={() => {
-                        this.imageLoaded();
-                      }}
-                      onError={() => {
-                        this.imageLoaded();
-                      }}
-                    />
-                  </div>
-                </a>
-                <a href={getPageName(project.title)}>
-                  <div className="title-and-description-container">
-                    <h4>{project.title}</h4>
-                    <div className="project-description-container">
-                      <p className="light-gray-text">{project.description}</p>
-                      <div className="icons">
-                        {project.icons.map((icon, index) => {
-                          return <img src={icon} key={index} alt="Icon" />;
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            );
-          })}
-
+          {this.props.designProjectsArray.map(generateProject)}
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
           <section className="empty-div"></section>
         </div>

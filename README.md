@@ -1,7 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Project deadline estimation](#project-deadline-estimation)
 - [Fonts](#fonts)
 - [Getting an element's size with JS](#getting-an-elements-size-with-js)
@@ -15,6 +14,8 @@
   - [Coding projects carousel](#coding-projects-carousel)
 - [Project page components](#project-page-components)
   - [The difference between `<TitleParagraph />` and `<TitleParagraphImage />`](#the-difference-between-titleparagraph--and-titleparagraphimage-)
+- [Deploying to github pages](#deploying-to-github-pages)
+- [Image optimization](#image-optimization)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -163,3 +164,23 @@ no carousel (next and previous buttons).
   include an image.
 - `<TitleParagraph />` adds margin-bottom after every paragraph except the very
   last paragraph. Also it doesn't include an image.
+
+# Deploying to github pages
+
+The Create React App
+[docs](https://create-react-app.dev/docs/deployment/#step-1-add-homepage-to-packagejson)
+show how to deploy this to github.
+
+By default the `CNAME` file gets clobbered when the `npm run deploy` script is
+run and it builds the site into the `gh-pages` branch, and then pushes that to
+github.com. In order to prevent this here is a
+[github issue on this topic](https://github.com/tschaub/gh-pages/issues/213).
+The fix is to put the `CNAME` file into the `public` folder.
+
+# Image optimization
+
+- [Great article on image optimization](https://www.abetterlemonadestand.com/optimizing-images-for-web/)
+- Use [ImageOptim](https://imageoptim.com/mac) (for Mac) to remove bloated
+  metadata.
+- Use [ShortPixel](https://shortpixel.com/) (web app) to compress images to a
+  much smaller size.

@@ -1,7 +1,11 @@
 import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import iosLight from "./../vector-images/ios-logo-lght-gray.svg";
-import homepageInmusik from "./../vector-images/inmusik-846x846.svg";
-import inmusikMain from "../vector-images/inmusik-main-2792x1366.png";
+import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
+
+import IOSLight from "./../vector-images/ios-logo-lght-gray.svg";
+import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
+
+import homepageInmusik from "./../vector-images/inmusik-708x708.png";
+import inmusikMain from "../vector-images/inmusik-main-2746x1342.png";
 import inmusikUserStories from "./../vector-images/inmusik-user-stories.png";
 import webDiscovery from "./../vector-images/inmusik-web-discovery.png";
 import webGetReady from "./../vector-images/inmusik-web-get-ready.png";
@@ -26,12 +30,15 @@ import iosJournals from "./../vector-images/inmusik-ios-journals.png";
 import iosArtistPage from "./../vector-images/inmusik-ios-artists-page.png";
 import iosArtistPageSongs from "./../vector-images/inmusik-ios-artists-page-songs.png";
 import iosSongPage from "./../vector-images/inmusik-ios-song-page.png";
+import { PageNames } from "../names";
 
 const inmusikData = {
-  componentName: "Inmusik",
+  componentName: PageNames.INMUSIK,
   title: "Inmusik",
   description: "Social network for emerging musicians and fans.",
-  icons: [webLight, iosLight],
+  icons: [webLight, IOSLight],
+  iconsDarkTheme: [darkThemeWebDark, darkThemeIOSDark],
+
   homepageImage: homepageInmusik,
 
   mainImage: inmusikMain,

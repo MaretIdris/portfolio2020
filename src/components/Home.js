@@ -11,28 +11,32 @@ import {
   homepageDesignProjectsTitle,
 } from "../data/projectsData";
 
-const Home = () => {
-  return (
-    <React.Fragment>
-      <Banner
-        strings={[
-          "am a product designer",
-          "express ideas through code",
-          "am startup tested",
-        ]}
-      />
-      <DesignProjects
-        title={homepageDesignProjectsTitle}
-        designProjectsArray={arrayOfDesignProjects}
-      />
-      <CodingProjects
-        title={homepageCodingProjectsTitle}
-        codingProjectsArray={arrayOfCodingProjects}
-      />
-      <Testimonials />
-      <Footer />
-    </React.Fragment>
-  );
-};
+class Home extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Banner
+          strings={[
+            "a UI Engineer",
+            "passionate about front-end web technologies",
+            "startup tested",
+          ]}
+        />
+        <CodingProjects
+          title={homepageCodingProjectsTitle}
+          codingProjectsArray={arrayOfCodingProjects}
+          myDarkThemeValue={this.props.myDarkThemeValue}
+        />
+        <DesignProjects
+          title={homepageDesignProjectsTitle}
+          designProjectsArray={arrayOfDesignProjects}
+          myDarkThemeValue={this.props.myDarkThemeValue}
+        />
+        <Testimonials />
+        <Footer myDarkThemeValue={this.props.myDarkThemeValue} />
+      </React.Fragment>
+    );
+  }
+}
 
 export default Home;

@@ -1,0 +1,3 @@
+const sharedObject = {};
+
+export { sharedObject };

@@ -70,9 +70,16 @@
 
 .responsive-image {
     width: 100%;
-    height: auto;
     /* https://css-tricks.com/using-css-cursors/ */
     cursor: url("../vector-images/zoom.svg"), pointer;
+}
+
+/*
+   Adds height: auto only for Firefox browser.
+   https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p
+*/
+@supports (-moz-appearance:none) {
+    .responsive-image { height: auto; }
 }
 
 /* Styling for requirements section. It's not a

@@ -2,62 +2,43 @@ import React from "react";
 import Home from "./components/Home";
 import TruckX from "./components/TruckX";
 import AbbeyRoadStudios from "./components/AbbeyRoadStudios";
-import UniversalAndroidMusicPlayer from "./components/UniversalAndroidMusicPlayer";
+import UAMP from "./components/UAMP";
 import Inmusik from "./components/Inmusik";
 import WholeWorldBand from "./components/WholeWorldBand";
 import WeatherApp from "./components/WeatherApp";
 import PlannerApp from "./components/PlannerApp";
 import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
+import { PageNames, PageNamesWithSpaces } from "./names";
 
-const PageNames = {
-  HOME: "Home",
-  ABOUT: "About",
-  TRUCKX: "TruckX",
-  UAMP: "UniversalAndroidMusicPlayer",
-  ABBEY_ROAD_STUDIOS: "AbbeyRoadStudios",
-  INMUSIK: "Inmusik",
-  WHOLEWORLDBAND: "WholeWorldBand",
-  WEATHER_APP: "WeatherApp",
-  PLANNER_APP: "PlannerApp",
-  PORTFOLIO_APP: "PortfolioApp",
-};
+const URL_PAGE_KEY = "page";
+const PAGE_NAME_PREFIX = "Maret Idris - ";
 
-const PageNamesWithSpaces = {
-  HOME: "Home",
-  ABOUT: "About",
-  TRUCKX: "TruckX",
-  UAMP: "Universal Android Music Player",
-  ABBEY_ROAD_STUDIOS: "Abbey Road Studios",
-  INMUSIK: "Inmusik",
-  WHOLEWORLDBAND: "WholeWorldBand",
-  WEATHER_APP: "Weather App",
-  PLANNER_APP: "Planner App",
-  PORTFOLIO_APP: "Portfolio App",
-};
-
-const getComponentForPageName = (name) => {
+/**
+ * @param myDarkThemeValue this is optional
+ */
+const getComponentForPageName = (name, myDarkThemeValue) => {
   switch (name) {
     case PageNames.HOME:
-      return <Home />;
+      return <Home myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.TRUCKX:
-      return <TruckX />;
+      return <TruckX myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.ABBEY_ROAD_STUDIOS:
-      return <AbbeyRoadStudios />;
+      return <AbbeyRoadStudios myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.UAMP:
-      return <UniversalAndroidMusicPlayer />;
+      return <UAMP myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.INMUSIK:
-      return <Inmusik />;
+      return <Inmusik myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.WHOLEWORLDBAND:
-      return <WholeWorldBand />;
+      return <WholeWorldBand myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.WEATHER_APP:
-      return <WeatherApp />;
+      return <WeatherApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.PLANNER_APP:
-      return <PlannerApp />;
+      return <PlannerApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.PORTFOLIO_APP:
-      return <PortfolioApp />;
+      return <PortfolioApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.ABOUT:
-      return <About />;
+      return <About myDarkThemeValue={myDarkThemeValue} />;
   }
 };
 
@@ -82,4 +63,4 @@ const getPageName = (pageName) => {
   }
 };
 
-export { PageNames, PageNamesWithSpaces, getComponentForPageName, getPageName };
+export { PAGE_NAME_PREFIX, URL_PAGE_KEY, getComponentForPageName, getPageName };

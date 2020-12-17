@@ -28,7 +28,8 @@
     padding: 7px 20px 5px 20px;
     font-family: var(--default-font);
     font-size: 0.95em;
-    color: var(--color-gray-darkest);
+    color: var(--color-try-app-button-text);
+    text-decoration: none;
 }
 
 .try-app-button:hover {

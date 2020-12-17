@@ -16,10 +16,9 @@ class Banner extends React.Component {
     const { strings } = this.props;
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
-      strings: strings,
+      strings,
       typeSpeed: 50,
       backSpeed: 30,
-      smartBackspace: true,
     };
     // this.el refers to the <span> in the render() method
     this.typed = new Typed(this.el, options);
@@ -36,7 +35,7 @@ class Banner extends React.Component {
       <div className="wrap banner">
         <h3>👋🏻 Hi, I am Maret Idris</h3>
         <div className="type-wrap">
-          I&nbsp;
+          I&nbsp; am&nbsp;
           <span
             style={{ whiteSpace: "pre" }}
             ref={(el) => {

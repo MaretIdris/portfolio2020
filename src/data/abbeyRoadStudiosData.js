@@ -1,6 +1,8 @@
 import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import homepageAbbeyRoadStudios from "./../vector-images/abbey-road-studios-846x846.svg";
-import abbeyRoadMain from "./../vector-images/abbey-road-main-2792x1366.png";
+import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
+
+import homepageAbbeyRoadStudios from "./../vector-images/abbey-road-studios-708x708.png";
+import abbeyRoadMain from "./../vector-images/abbey-road-main-2746x1342.png";
 import personas from "./../vector-images/abbey-road-personas-2x.png";
 import oldSite from "./../vector-images/abbey-road-old-site-2x.png";
 import sitemap from "./../vector-images/abbey-road-sitemap-2x.png";
@@ -14,16 +16,16 @@ import engineerPage from "./../vector-images/abbey-road-engineer-page.png";
 import eventHire from "./../vector-images/abbey-road-event-hire.png";
 import crossingCam from "./../vector-images/abbey-road-crossing-cam.png";
 import thankYou from "./../vector-images/abbey-road-thank-you.png";
-import uampData from "./uampData";
-import inmusikData from "./inmusikData";
-import wholeWorldBandData from "./wholeWorldBandData";
-import truckXData from "./truckXData";
+import { PageNames } from "../names";
+import darkThemeIOSDark from "../vector-images/dark-theme-ios-dark.svg";
+import darkThemeAndroidDark from "../vector-images/dark-theme-android-dark.svg";
 
 const abbeyRoadStudiosData = {
-  componentName: "AbbeyRoadStudios",
+  componentName: PageNames.ABBEY_ROAD_STUDIOS,
   title: "Abbey Road Studios",
   description: "The most famous recording studio in the world.",
   icons: [webLight],
+  iconsDarkTheme: [darkThemeWebDark],
   homepageImage: homepageAbbeyRoadStudios,
   homepageImgAlt: "Abbey Road Studios image",
 
@@ -44,6 +46,8 @@ const abbeyRoadStudiosData = {
     "I was the lead designer in this project creating every design for the public site. The goal of this large project was to redesign the old Abbey Road Studios website and create an easy to navigate single home for all Abby Road brands (studios, institute, RED, store, crossing cam).",
     "Project work also included making it easier to purchase and manage services like online mixing, mastering and create a checkout process for the Abbey Road digital store. The project extended to also designing Abbey Road Studios emails (promotional, welcome and purchase confirmation emails) and also designing an online song competition to promote Abbey Road Studios online mixing and mastering services.",
   ],
+
+  endResultTitle: "End result",
 
   featuresTitle: "Features",
   featuresArray: [

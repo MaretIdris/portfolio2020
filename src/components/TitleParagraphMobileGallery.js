@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import closeIcon from "./../vector-images/close-icon.svg";
-import { getValueOfCSSVariable, openModal, closeModal } from "../utils";
+import { getIntegerValueOfCSSVariable, openModal, closeModal } from "../utils";
 
 // Pass this component following props:
 // - title={}
@@ -85,7 +85,7 @@ class TitleParagraphMobileGallery extends Component {
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
     let leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--small-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--small-page-padding");
     const leftOfFirstImageWithoutAddedPadding = this.firstImage.getBoundingClientRect()
       .left;
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
@@ -100,7 +100,7 @@ class TitleParagraphMobileGallery extends Component {
   hidePreviousButtonIfViewport601To1280Px = () => {
     const leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--default-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--default-page-padding");
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfMobileGalleryImagesContainer)

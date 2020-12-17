@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import { closeModal, getValueOfCSSVariable, openModal } from "../utils";
+import { closeModal, getIntegerValueOfCSSVariable, openModal } from "../utils";
 
 // This component is similar to TitleParagraphMobileGallery component.
 // Pass this component following props:
@@ -82,7 +82,7 @@ class TitleParagraphWebGallery extends Component {
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
     let leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--small-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--small-page-padding");
     const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
@@ -95,7 +95,7 @@ class TitleParagraphWebGallery extends Component {
   hidePreviousButtonIfViewport601To1280Px = () => {
     const leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--default-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--default-page-padding");
     const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
