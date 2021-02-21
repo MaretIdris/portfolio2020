@@ -36,7 +36,7 @@ class About extends React.Component {
           </h3>
           <a
             href={resume}
-            download="maret-idris-resume"
+            download="maret-idris-resume.docx"
             className="try-app-button"
           >
             Download resume
