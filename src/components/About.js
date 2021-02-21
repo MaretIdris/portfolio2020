@@ -47,135 +47,119 @@ class About extends React.Component {
 
     const designCards = () => {
       return (
-        <section className="design-cards-container">
-          <div className="design-card first-card">
-            <h5 className="h5-padding">Maret Idris</h5>
-            <ul>
-              <li className="responsive-list">
-                <span className="secondary-font-bold">Email: </span>
-                <span className="secondary-font">
-                  maret.career@fasterlap.com
-                </span>
-              </li>
-              <li className="responsive-list">
-                <span className="secondary-font-bold">Coding experience: </span>
-                <span className="secondary-font">2 years.</span>
-              </li>
-              <li className="responsive-list">
-                <span className="secondary-font-bold">Design experience: </span>
-                <span className="secondary-font">7 years.</span>
-              </li>
-              <br />
-              <li>
-                <span className="secondary-font-bold">Strengths: </span>
-                <ul>
-                  <li className="bullet-point-container">
-                    <span className="dash-regular-weight secondary-font">
-                      -
-                    </span>
-                    <span className="secondary-font">UI/visual design.</span>
-                  </li>
-                  <li className="bullet-point-container">
-                    <span className="dash-regular-weight secondary-font">
-                      -
-                    </span>
-                    <span className="secondary-font">End-to-end design.</span>
-                  </li>
-                  <li className="bullet-point-container">
-                    <span className="dash-regular-weight secondary-font">
-                      -
-                    </span>
-                    <span className="secondary-font">
-                      Prototyping (JavaScript, React, HTML, CSS) in code using
-                      real data.
-                    </span>
-                  </li>
-                  <li className="bullet-point-container">
-                    <span className="dash-regular-weight secondary-font">
-                      -
-                    </span>
-                    <span className="secondary-font">
-                      Attention to details.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-              <br />
-              <li>
-                <span className="secondary-font-bold last-line">
-                  Weakness:{" "}
-                </span>
-                <span className="secondary-font last-line">
-                  In-depth user research.
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div className="design-card second-card">
-            <h5 className="h5-padding">
-              What have I been up to for the last 2 years
-            </h5>
-            <p>
-              In Jan 2019 I left R3BL to learn how to code full time. I learned
-              responsive web design, HTML, CSS, advanced JavaScript (including
-              asynchronous JavaScript), React, CSS, and JS animation, how to use
-              tools like Webpack, ESLint, version control with git, GitHub, how
-              to use the terminal, and CLIs, etc.
-            </p>
-            <br />
-            <p>
-              I was taught and mentored by a Google SWE, I read books and took
-              courses online. I was curious about how my designs were
-              implemented and how technology can help to make better user
-              experiences.
-            </p>
-            <br />
-            <p>
-              Because I learned to code, I understand the capabilities &
-              constraints of technology and how they apply to the user
-              experience through designs. I can build interactive prototypes in
-              code, I can effectively communicate with engineers using their
-              terminology.
-            </p>
-          </div>
+        <section className="vertical-title-container container-one">
+          <h5 className="h5-padding-bottom">Maret Idris</h5>
+          <ul>
+            <li className="responsive-list">
+              <span className="secondary-font-bold">Email: </span>
+              <span className="secondary-font">maret.career@fasterlap.com</span>
+            </li>
+            <li className="responsive-list">
+              <span className="secondary-font-bold">Coding experience: </span>
+              <span className="secondary-font">2 years.</span>
+            </li>
+            <li className="responsive-list">
+              <span className="secondary-font-bold">Design experience: </span>
+              <span className="secondary-font">7 years.</span>
+            </li>
+          </ul>
+          <br />
+          <p>
+            I am a UI Engineer with 2-years of experience working on SPAs using
+            React, JavaScript (ES6), HTML5, CSS3 (Flexbox, CSS Grid, Media
+            Queries, Modules, animations).
+          </p>
+          <br />
+          <p>
+            Before that, I was a product designer for 7-years. I co-founded a
+            startup in Ireland in 2012, which I relocated to the Bay Area in
+            2015.
+          </p>
         </section>
       );
     };
 
     const thingsIDo = () => {
       return (
-        <section className="vertical-title-container first-card">
-          <h5 className="h5-padding">Things I do</h5>
+        <section className="vertical-title-container container-two">
+          <h5 className="h5-padding-bottom">Coding skills</h5>
           <ul>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">
-                  Responsive web design
-                </span>
-                <span className="secondary-font">&nbsp;(2 years)</span>
-              </div>
+              <p className="secondary-font">
+                <b>JavaScript</b>, <b>TypeScript</b>, <b>React</b>, <b>HTML5</b>
+                , <b>CSS3</b> (inc. CSS Modules, Media Queries, CSS Grid,
+                Flexbox, etc), <b>Node.js</b>, Express
+              </p>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">Static web design</span>
-                <span className="secondary-font">&nbsp;(2.5 years)</span>
-              </div>
+              <p className="secondary-font">
+                <b>Functional programming</b>, <b>OOP</b> (object-oriented
+                programming)
+              </p>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">Android design</span>
-                <span className="secondary-font">&nbsp;(1 year)</span>
-              </div>
+              <p className="secondary-font">
+                npm, Webpack, ESLint, Prettier, Babel
+              </p>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">iOS design</span>
-                <span className="secondary-font">&nbsp;(1.5 years)</span>
-              </div>
+              <p className="secondary-font">
+                <b>CLI</b> (fish shell)
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>REST and Web APIs</b>
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>Git</b>, <b>GitHub</b>
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>Unit testing</b> (Jasmine, Karma)
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>CSS animation</b>, <b>JavaScript animation</b>
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>SPA</b> (single-page application)
+              </p>
+            </li>
+            <li className="bullet-point-container"></li>
+          </ul>
+          <h5 className="h5-padding-bottom h5-padding-top">Design skills</h5>
+          <ul>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">Responsive web design</span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">Static web design</span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">Android design</span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">iOS design</span>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
@@ -192,17 +176,6 @@ class About extends React.Component {
                 <span className="secondary-font-bold">Interaction design</span>
                 <span className="secondary-font">
                   &nbsp;using Figma, Sketch
-                </span>
-              </div>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">
-                  Prototyping using code{" "}
-                </span>
-                <span className="secondary-font">
-                  (JavaScript, HTML, CSS, React, npm, Webpack)
                 </span>
               </div>
             </li>
@@ -232,26 +205,20 @@ class About extends React.Component {
 
     const articlesIWrote = () => {
       const screenDensity =
-        "https://blog.prototypr.io/designing-for-multiple-screen-densities-on-android-5fba8afe7ead";
+        "https://developerlife.com/2018/07/21/designing-for-multiple-screen-densities-on-android/";
       const responsive =
-        "https://blog.prototypr.io/a-pragmatic-guide-to-designing-and-building-responsive-web-applications-ff625dd2f206";
+        "https://developerlife.com/2019/08/25/guide-to-building-responsive-web-apps/";
       const flexboxOne =
         "https://developerlife.com/2017/11/15/flexbox-getting-started-part-1-2/";
       const flexboxTwo =
         "https://developerlife.com/2017/11/15/flexbox-building-a-navigation-bar-part-2-2/";
 
       return (
-        <section className="vertical-title-container second-card">
-          <h5 className="h5-padding">Articles I've published</h5>
+        <section className="vertical-title-container container-three">
+          <h5 className="h5-padding-bottom">Articles I've published</h5>
           <ul>
             <li className="secondary-font">
-              I can build responsive web applications. I understand how
-              micro-interactions can enhance user experience. I understand how
-              to keep data in mind when designing, etc.
-            </li>
-            <br />
-            <li className="secondary-font">
-              I share my knowledge of how to do it on{" "}
+              I share my knowledge on{" "}
               <a
                 href="https://developerlife.com/category/UXE/"
                 target="_blank"
@@ -267,9 +234,8 @@ class About extends React.Component {
                 rel="noreferrer"
                 className="secondary-font-link-no-font-size"
               >
-                Medium
-              </a>{" "}
-              (Prototypr and codeburst).
+                Medium.
+              </a>
             </li>
             <br />
             <li className="bullet-point-container">
@@ -325,8 +291,8 @@ class About extends React.Component {
     return (
       <React.Fragment>
         {heading()}
-        {designCards()}
         <div className="design-cards-container remove-padding-bottom">
+          {designCards()}
           {thingsIDo()}
           {articlesIWrote()}
         </div>
